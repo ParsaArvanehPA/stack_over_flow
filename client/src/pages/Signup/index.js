@@ -7,10 +7,9 @@ import Side from './Side';
 import '../../styles/signup.css';
 
 const Signup = () => {
-	const [ formStatus, setFormStatus ] = useState(false);
+	const [ formStatus, setFormStatus ] = useState(true);
 
 	const changeFormStatus = (toSignup) => {
-		console.log(toSignup);
 		setFormStatus(!formStatus);
 	};
 

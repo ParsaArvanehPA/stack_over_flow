@@ -19,28 +19,40 @@ const Main = (props) => {
 			button.classList.remove('button--gray');
 	};
 
+	let formTitle = <React.Fragment>Join Us Now !</React.Fragment>;
+	let actionTitle = <React.Fragment>SIGN UP</React.Fragment>;
+	let googleTitle = <React.Fragment>Sign up with Google</React.Fragment>;
+
+	if (formStatus === false) {
+		formTitle = <React.Fragment>Welcome Back !</React.Fragment>;
+		actionTitle = <React.Fragment>SIGN IN</React.Fragment>;
+		googleTitle = <React.Fragment>Sign in with Google</React.Fragment>;
+	}
+
 	return (
 		<div className={'main' + (formStatus ? '' : ' login')}>
-			<div className='main__title'>Join Us Now !</div>
+			<div className='main__title'>{formTitle}</div>
 			<InputBox
 				type='text'
 				name='username'
 				placeholder='Username'
 				icon={<PersonIcon />}
 			/>
-			<InputBox
-				type='email'
-				name='email'
-				placeholder='Email'
-				icon={<EmailIcon />}
-			/>
+			{(formStatus === undefined || formStatus !== false) && (
+				<InputBox
+					type='email'
+					name='email'
+					placeholder='Email'
+					icon={<EmailIcon />}
+				/>
+			)}
 			<InputBox
 				type='password'
 				name='password'
 				placeholder='Password'
 				icon={<LockIcon />}
 			/>
-			<div className='button button--primary'>SIGN UP</div>
+			<div className='button button--primary'>{actionTitle}</div>
 
 			<hr className='with-text' text='or' />
 
@@ -48,10 +60,9 @@ const Main = (props) => {
 				className='button button--google'
 				onMouseEnter={addGrayClassToAllButtons}
 				onMouseLeave={removeGrayClassFromAllButtons}>
-				<span>
-					<GoogleIcon />
-				</span>{' '}
-				Signup with Google
+				<GoogleIcon className='icon' />
+				{'  '}
+				{googleTitle}
 			</div>
 		</div>
 	);
