@@ -8,6 +8,8 @@ import Landing from './pages/Landing';
 import Signup from './pages/Signup';
 import NotFound from './pages/NotFound';
 
+import './styles/index.css';
+
 const routing = (
 	<BrowserRouter>
 		<Switch>

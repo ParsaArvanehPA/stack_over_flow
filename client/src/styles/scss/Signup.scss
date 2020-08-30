@@ -1,160 +1,201 @@
 @import "./config";
 
-.button {
-	width: fit-content;
+#signup {
+	background: $color_blue_cornflower;
 
-	margin: 0 auto;
-	padding: 2rem 10rem;
+	.button {
+		width: fit-content;
 
-	border-radius: 4rem;
+		margin: 0 auto;
+		padding: 2rem 10rem;
 
-	font-size: 3.2rem;
+		border-radius: 4rem;
 
-	cursor: pointer;
-}
+		font-size: 3.2rem;
 
-.wrapper {
-	display: grid;
-	grid-template-columns: 62.5% 37.5%;
-	grid-template-areas: "left right";
+		cursor: pointer;
+	}
 
-	width: 100vw;
-	height: 100vh;
+	.wrapper {
+		display: grid;
 
-	.left {
-		grid-area: left;
+		grid-template-rows: 12rem auto;
+		grid-template-columns: 62.5% 37.5%;
+		/* prettier-ignore */
+		grid-template-areas: "nav  nav  "
+							 "left right";
+		align-items: start;
 
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+		width: 100vw;
+		height: 100vh;
 
-		width: 100%;
-		height: 100%;
+		.header {
+			grid-area: nav;
 
-		border-radius: 6rem 0 0 6rem;
+			height: 100%;
 
-		text-align: center;
-
-		&__title {
-			color: $color_blue_cornflower;
-
-			margin-bottom: 6rem;
-
-			font-size: 7.2rem;
-			font-weight: 700;
-
-			letter-spacing: 0.28rem;
-		}
-
-		.input-box {
-			background-color: $color_gray_95;
-
-			display: grid;
-			grid-template-columns: 1fr 7fr;
-			grid-template-areas: "icon text";
-			align-items: center;
-
-			width: 50%;
-			height: 8rem;
-
-			margin-bottom: 3rem;
-			padding: 1rem 2rem;
-
-			border-radius: 2rem;
-
-			cursor: text;
-
-			&__icon {
-				grid-area: icon;
-
-				color: $color_gray_60;
-
-				justify-self: center;
-
-				* {
-					font-size: 3.2rem;
-				}
-			}
-
-			input {
-				grid-area: text;
-
-				background-color: transparent;
-				color: $color_gray_10;
+			&__navigation {
+				grid-template-columns: 62.5% 37.5%;
+				grid-template-areas: "logo links";
 
 				height: 100%;
 
-				padding: 0 2rem;
+				margin-top: 0;
+				padding: 2rem 0;
 
-				border: none;
+				&__logo {
+					grid-area: logo;
 
-				font-size: 3.2rem;
-
-				&::placeholder {
-					color: $color_gray_60;
+					margin-left: 6rem;
 				}
 
-				&::selection {
-					background-color: $color_blue_cornflower;
-					color: $color_white;
+				&__link {
+					grid-area: links;
+
+					justify-self: end;
 				}
 
-				&:focus {
-					outline: none;
+				&__action {
+					display: none;
 				}
 			}
 		}
 
-		.button {
+		.left {
+			grid-area: left;
+
+			background: $color_white;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+
+			width: 100%;
+			height: 100%;
+
+			border-radius: 0 6rem 0 0;
+
+			text-align: center;
+
+			&__title {
+				color: $color_blue_cornflower;
+
+				margin-bottom: 6rem;
+
+				font-size: 7.2rem;
+				font-weight: 700;
+
+				letter-spacing: 0.28rem;
+			}
+
+			.input-box {
+				background-color: $color_gray_95;
+
+				display: grid;
+				grid-template-columns: 1fr 7fr;
+				grid-template-areas: "icon text";
+				align-items: center;
+
+				width: 50%;
+				height: 8rem;
+
+				margin-bottom: 3rem;
+				padding: 1rem 2rem;
+
+				border-radius: 2rem;
+
+				cursor: text;
+
+				&__icon {
+					grid-area: icon;
+
+					color: $color_gray_60;
+
+					justify-self: center;
+
+					* {
+						font-size: 3.2rem;
+					}
+				}
+
+				input {
+					grid-area: text;
+
+					background-color: transparent;
+					color: $color_gray_10;
+
+					height: 100%;
+
+					padding: 0 2rem;
+
+					border: none;
+
+					font-size: 3.2rem;
+
+					&::placeholder {
+						color: $color_gray_60;
+					}
+
+					&::selection {
+						background-color: $color_blue_cornflower;
+						color: $color_white;
+					}
+
+					&:focus {
+						outline: none;
+					}
+				}
+			}
+
+			.button {
+				background-color: $color_blue_cornflower;
+				color: $color_white;
+
+				margin: 3rem auto 6rem;
+			}
+		}
+
+		.right {
+			grid-area: right;
+
 			background-color: $color_blue_cornflower;
-			color: $color_white;
 
-			margin: 3rem auto 6rem;
-		}
-	}
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
 
-	.right {
-		grid-area: right;
+			width: 100%;
+			height: 100%;
 
-		background-color: $color_blue_cornflower;
+			text-align: center;
 
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
+			&__title {
+				color: $color_white;
 
-		width: 100%;
-		height: 100%;
+				font-size: 4.8rem;
+				font-weight: 700;
 
-		border-radius: 6rem 0 0 6rem;
+				letter-spacing: 0.28rem;
+			}
 
-		text-align: center;
+			&__subtitle {
+				color: $color_white;
 
-		&__title {
-			color: $color_white;
+				margin: 3.2rem auto 6rem;
 
-			font-size: 4.8rem;
-			font-weight: 700;
+				font-size: 3.2rem;
+				font-weight: 300;
 
-			letter-spacing: 0.28rem;
-		}
+				line-height: 4.8rem;
+				letter-spacing: 0.32rem;
+			}
 
-		&__subtitle {
-			color: $color_white;
-
-			margin: 3.2rem auto 6rem;
-
-			font-size: 3.2rem;
-			font-weight: 300;
-
-			line-height: 4.8rem;
-			letter-spacing: 0.32rem;
-		}
-
-		.button {
-			background-color: $color_white;
-			color: $color_blue_cornflower;
+			.button {
+				background-color: $color_white;
+				color: $color_blue_cornflower;
+			}
 		}
 	}
 }

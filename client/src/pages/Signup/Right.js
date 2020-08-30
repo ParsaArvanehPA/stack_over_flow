@@ -3,9 +3,9 @@ import React from 'react';
 const Right = (props) => {
 	return (
 		<div className='right'>
-			<div className='right__title'>Hello Friend !</div>
+			<div className='right__title'>Hello, Friend !</div>
 			<p className='right__subtitle'>
-				You seem familiar …
+				You seem familiar
 				<br />
 				Have we met before ?!
 			</p>

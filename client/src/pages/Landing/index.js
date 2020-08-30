@@ -5,16 +5,14 @@ import Footer from './Footer';
 
 import '../../styles/landing.css';
 
-class Landing extends Component {
-	render() {
-		return (
-			<React.Fragment>
-				<Header />
-				<Main />
-				<Footer />
-			</React.Fragment>
-		);
-	}
-}
+const Landing = () => {
+	return (
+		<div id='landing'>
+			<Header />
+			<Main />
+			<Footer />
+		</div>
+	);
+};
 
 export default Landing;

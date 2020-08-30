@@ -63,6 +63,10 @@ $font-all: $font-roboto, $font_sahel, $font-default;
 
 	margin: 0;
 	padding: 0;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 html {

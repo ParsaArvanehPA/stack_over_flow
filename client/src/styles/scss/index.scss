@@ -1,0 +1,16 @@
+@import "./config";
+
+body::-webkit-scrollbar {
+	width: 2rem;
+}
+
+body::-webkit-scrollbar-track {
+	background: $color_blue_cornflower;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: $color_orange_supernova;
+
+	border: none;
+	border-radius: 2rem;
+}
