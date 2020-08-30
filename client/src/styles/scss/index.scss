@@ -1,5 +1,14 @@
 @import "./config";
 
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
+
 body::-webkit-scrollbar {
 	width: 2rem;
 }
@@ -13,4 +22,33 @@ body::-webkit-scrollbar-thumb {
 
 	border: none;
 	border-radius: 2rem;
+}
+
+.scrollTop {
+	background-color: $color_black !important;
+	color: $color_white !important;
+
+	position: fixed;
+
+	bottom: 2rem;
+	right: 2rem;
+
+	z-index: 1000;
+
+	align-items: center;
+	justify-content: center;
+
+	border-radius: 100%;
+
+	opacity: 0.5;
+
+	cursor: pointer;
+
+	animation: fadeIn 0.3s;
+}
+
+.scrollTop:hover {
+	background-color: $color_orange_supernova !important;
+
+	opacity: 1;
 }
