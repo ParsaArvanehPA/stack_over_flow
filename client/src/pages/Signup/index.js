@@ -20,11 +20,13 @@ const Signup = () => {
 				<div className='header'>
 					<StandardNav />
 				</div>
-				<Main />
-				<Side
-					formStatus={formStatus}
-					changeFormStatus={changeFormStatus}
-				/>
+				<div className={'container' + (formStatus ? '' : ' login')}>
+					<Main />
+					<Side
+						formStatus={formStatus}
+						changeFormStatus={changeFormStatus}
+					/>
+				</div>
 			</div>
 		</div>
 	);
