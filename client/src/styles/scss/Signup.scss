@@ -23,11 +23,16 @@
 		grid-template-columns: 62.5% 37.5%;
 		/* prettier-ignore */
 		grid-template-areas: "nav  nav  "
-							 "left right";
+							 "main side";
 		align-items: start;
 
 		width: 100vw;
 		height: 100vh;
+
+		transition: all 10000ms ease-in-out;
+
+		&--login {
+		}
 
 		.header {
 			grid-area: nav;
@@ -61,8 +66,8 @@
 			}
 		}
 
-		.left {
-			grid-area: left;
+		.main {
+			grid-area: main;
 
 			background: $color_white;
 
@@ -169,10 +174,15 @@
 					color: $color_white;
 				}
 			}
+
+			&.login {
+				grid-area: right;
+				// transform: translate3d(-60rem, 0, 0);
+			}
 		}
 
-		.right {
-			grid-area: right;
+		.side {
+			grid-area: side;
 
 			background-color: $color_blue_cornflower;
 
@@ -185,6 +195,8 @@
 			height: 100%;
 
 			text-align: center;
+
+			transition: all 1000ms ease-in-out;
 
 			&__title {
 				color: $color_white;
@@ -210,6 +222,11 @@
 			.button {
 				background-color: $color_white;
 				color: $color_blue_cornflower;
+			}
+
+			&.login {
+				grid-area: left;
+				// transform: translate3d(-60rem, 0, 0);
 			}
 		}
 	}

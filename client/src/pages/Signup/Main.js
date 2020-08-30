@@ -6,7 +6,7 @@ import { AiOutlineMail as EmailIcon } from 'react-icons/ai';
 import { BiLockAlt as LockIcon } from 'react-icons/bi';
 import { FaGoogle as GoogleIcon } from 'react-icons/fa';
 
-const Left = () => {
+const Main = () => {
 	const addGrayClassToAllButtons = (e) => {
 		for (let button of e.target.parentNode.getElementsByClassName('button'))
 			button.classList.add('button--gray');
@@ -18,8 +18,8 @@ const Left = () => {
 	};
 
 	return (
-		<div className='left'>
-			<div className='left__title'>Join Us Now !</div>
+		<div className='main'>
+			<div className='main__title'>Join Us Now !</div>
 			<InputBox
 				type='text'
 				name='username'
@@ -55,4 +55,4 @@ const Left = () => {
 	);
 };
 
-export default Left;
+export default Main;
