@@ -6,7 +6,9 @@ import { AiOutlineMail as EmailIcon } from 'react-icons/ai';
 import { BiLockAlt as LockIcon } from 'react-icons/bi';
 import { FaGoogle as GoogleIcon } from 'react-icons/fa';
 
-const Main = () => {
+const Main = (props) => {
+	const { formStatus } = props;
+
 	const addGrayClassToAllButtons = (e) => {
 		for (let button of e.target.parentNode.getElementsByClassName('button'))
 			button.classList.add('button--gray');
@@ -18,7 +20,7 @@ const Main = () => {
 	};
 
 	return (
-		<div className='main'>
+		<div className={'main' + (formStatus ? '' : ' login')}>
 			<div className='main__title'>Join Us Now !</div>
 			<InputBox
 				type='text'

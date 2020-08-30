@@ -10,6 +10,13 @@ const Side = (props) => {
 
 	return (
 		<div className={'side' + (formStatus ? '' : ' login')}>
+			<div className='background-shape'>
+				<div className='corner left' />
+				<div className='mask left' />
+				<div className='corner right' />
+				<div className='mask right' />
+			</div>
+
 			<div className='side__title'>Hello, Friend !</div>
 			<p className='side__subtitle'>
 				You seem familiar

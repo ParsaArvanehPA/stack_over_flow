@@ -7,7 +7,7 @@ import Side from './Side';
 import '../../styles/signup.css';
 
 const Signup = () => {
-	const [ formStatus, setFormStatus ] = useState(true);
+	const [ formStatus, setFormStatus ] = useState(false);
 
 	const changeFormStatus = (toSignup) => {
 		console.log(toSignup);
@@ -21,7 +21,7 @@ const Signup = () => {
 					<StandardNav />
 				</div>
 				<div className={'container' + (formStatus ? '' : ' login')}>
-					<Main />
+					<Main formStatus={formStatus} />
 					<Side
 						formStatus={formStatus}
 						changeFormStatus={changeFormStatus}

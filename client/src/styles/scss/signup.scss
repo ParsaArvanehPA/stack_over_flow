@@ -1,7 +1,7 @@
 @import "./config";
 
 #signup {
-	background: $color_blue_cornflower;
+	background: $color_white;
 
 	.button {
 		width: fit-content;
@@ -26,7 +26,11 @@
 		width: 100vw;
 		height: 100vh;
 
+		overflow: hidden;
+
 		.header {
+			background: $color_blue_cornflower;
+
 			&__navigation {
 				grid-template-columns: 62.5% 37.5%;
 				grid-template-areas: "logo links";
@@ -54,33 +58,33 @@
 
 		.container {
 			position: relative;
-			// display: flex;
 
-			transition: all 1000ms ease-in-out;
-
-			// &.login {
-			// 	flex-direction: row-reverse;
-			// }
+			.main,
+			.side {
+				transition: all 3000ms ease-in-out;
+			}
 
 			.main {
-				opacity: 0;
-				background: $color_white;
-
 				position: absolute;
+				right: 100%;
+
+				transform: translate3d(100%, 0, 0);
+				z-index: 4;
+				* {
+					z-index: 4;
+				}
 
 				display: inline-flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 
-				width: 62%;
+				width: 62.5%;
 				height: 100%;
 
 				border-radius: 0 6rem 0 0;
 
 				text-align: center;
-
-				transition: all 1000ms ease-in-out;
 
 				&__title {
 					color: $color_blue_cornflower;
@@ -175,29 +179,76 @@
 				}
 
 				&.login {
-					transform: translate3d(-60rem, 0, 0);
+					right: 0;
+					transform: translate3d(0, 0, 0);
+
+					border-radius: 6rem 0 0 0;
 				}
 			}
 
 			.side {
-				background-color: $color_blue_cornflower;
-
 				position: absolute;
 				left: 100%;
 
 				transform: translate3d(-100%, 0, 0);
+				// z-index: 4;
+				* {
+					z-index: 5;
+				}
 
 				display: inline-flex;
 				flex-direction: column;
 				justify-content: center;
 				align-items: center;
 
-				width: 37%;
+				width: 37.5%;
 				height: 100%;
 
 				text-align: center;
 
-				transition: all 1000ms ease-in-out;
+				.background-shape {
+					background-color: $color_blue_cornflower;
+
+					position: absolute;
+					width: 100%;
+					height: 100%;
+
+					* {
+						position: absolute;
+
+						width: 8rem;
+						height: 100%;
+					}
+
+					.corner {
+						background-color: $color_blue_cornflower;
+
+						z-index: 2;
+					}
+
+					.left {
+						transform: translate3d(-100%, 0, 0);
+					}
+
+					.right {
+						right: 0;
+						transform: translate3d(100%, 0, 0);
+					}
+
+					.mask {
+						background-color: $color_white;
+
+						z-index: 3;
+
+						&.left {
+							border-radius: 0 4rem 0 0;
+						}
+
+						&.right {
+							border-radius: 4rem 0 0 0;
+						}
+					}
+				}
 
 				&__title {
 					color: $color_white;
@@ -226,7 +277,7 @@
 				}
 
 				&.login {
-					left: 0;
+					left: 60rem;
 					transform: translate3d(0, 0, 0);
 				}
 			}
