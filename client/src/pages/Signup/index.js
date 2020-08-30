@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import StandardNav from '../../components/nav/StandardNav';
-import Left from './Left';
-import Right from './Right';
+import Main from './Main';
+import Side from './Side';
 
 import '../../styles/signup.css';
 
-const Signup = (props) => {
+const Signup = () => {
+	const [ formStatus, setFormStatus ] = useState(true);
+
+	const changeFormStatus = (toSignup) => {
+		setFormStatus(!formStatus);
+	};
+
 	return (
 		<div id='signup'>
 			<div className='wrapper'>
 				<div className='header'>
 					<StandardNav />
 				</div>
-				<Left />
-				<Right />
+				<div className={'container' + (formStatus ? '' : ' login')}>
+					<Main formStatus={formStatus} />
+					<Side
+						formStatus={formStatus}
+						changeFormStatus={changeFormStatus}
+					/>
+				</div>
 			</div>
 		</div>
 	);
