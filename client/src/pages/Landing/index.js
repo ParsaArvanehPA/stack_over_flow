@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
+import Header from './Header';
+import Main from './Main';
+import Footer from './Footer';
 
-const Landing = (props) => {
-	return <h1>Hello World!</h1>;
-};
+import '../../styles/landing.css';
+
+class Landing extends Component {
+	render() {
+		return (
+			<React.Fragment>
+				<Header />
+				<Main />
+				<Footer />
+			</React.Fragment>
+		);
+	}
+}
 
 export default Landing;

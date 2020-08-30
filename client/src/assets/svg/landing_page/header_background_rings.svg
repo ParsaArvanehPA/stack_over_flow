@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1948" height="805" viewBox="0 0 1948 805">
+  <g id="Rings" transform="translate(141 394)">
+    <g id="left" transform="translate(-141 -394)" fill="none" stroke="rgba(255,255,255,0.26)" stroke-width="20">
+      <ellipse cx="141.5" cy="146.5" rx="141.5" ry="146.5" stroke="none"/>
+      <ellipse cx="141.5" cy="146.5" rx="131.5" ry="136.5" fill="none"/>
+    </g>
+    <g id="center" transform="translate(840 118)" fill="none" stroke="rgba(255,255,255,0.26)" stroke-width="20">
+      <ellipse cx="141.5" cy="146.5" rx="141.5" ry="146.5" stroke="none"/>
+      <ellipse cx="141.5" cy="146.5" rx="131.5" ry="136.5" fill="none"/>
+    </g>
+    <g id="right" transform="translate(1656 167)" fill="none" stroke="rgba(255,255,255,0.26)" stroke-width="20">
+      <ellipse cx="75.5" cy="78.5" rx="75.5" ry="78.5" stroke="none"/>
+      <ellipse cx="75.5" cy="78.5" rx="65.5" ry="68.5" fill="none"/>
+    </g>
+  </g>
+</svg>

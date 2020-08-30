@@ -3,7 +3,7 @@ import React, { userState } from 'react';
 import Left from './Left';
 import Right from './Right';
 
-import '../../styles/Signup.css';
+import '../../styles/signup.css';
 
 const Signup = (props) => {
 	return (
