@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import HeaderBackgroundTop from '../../assets/svg/landing_page/header_background_top.svg';
 import HeaderBackgroundRings from '../../assets/svg/landing_page/header_background_rings.svg';
@@ -10,7 +10,7 @@ import MainFeatureSecurity from '../../assets/svg/landing_page/feature_security.
 import MainFeatureFree from '../../assets/svg/landing_page/feature_free.svg';
 import SVG from './SVG';
 
-function LandingSVG(props) {
+const LandingSVG = (props) => {
 	let svg = {};
 
 	switch (props.name) {
@@ -44,6 +44,6 @@ function LandingSVG(props) {
 	}
 
 	return <SVG {...props} svg={svg} />;
-}
+};
 
 export default LandingSVG;

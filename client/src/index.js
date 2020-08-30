@@ -4,17 +4,22 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 
 import * as serviceWorker from './serviceWorker';
 
+import App from './App';
 import Landing from './pages/Landing';
 import Signup from './pages/Signup';
 import NotFound from './pages/NotFound';
 
+import './styles/index.css';
+
 const routing = (
 	<BrowserRouter>
-		<Switch>
-			<Route exact path='/' component={Landing} />
-			<Route exact path='/signup' component={Signup} />
-			<Route component={NotFound} />
-		</Switch>
+		<App>
+			<Switch>
+				<Route exact path='/' component={Landing} />
+				<Route exact path='/signup' component={Signup} />
+				<Route component={NotFound} />
+			</Switch>
+		</App>
 	</BrowserRouter>
 );
 

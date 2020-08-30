@@ -1,0 +1,95 @@
+@import "./config";
+
+.header__navigation {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr;
+	align-items: center;
+
+	width: 100%;
+
+	margin-top: 2rem;
+
+	li,
+	a,
+	button {
+		color: $color_white;
+
+		text-decoration: none;
+	}
+
+	&__logo {
+		width: fit-content;
+
+		font-size: 4.8rem;
+		font-weight: 700;
+	}
+
+	&__links {
+		justify-self: center;
+
+		list-style: none;
+
+		li {
+			display: inline-block;
+
+			margin: 2rem;
+
+			text-align: center;
+
+			a {
+				display: inline-block;
+				width: 100%;
+
+				padding: 0.5rem 2rem;
+
+				font-size: 2.4rem;
+
+				&:hover {
+					color: $color_blue_cornflower;
+
+					border: none;
+					border-radius: 10rem;
+
+					box-shadow: inset 0 10rem 0 0 $color_white,
+						inset 0 -10rem 0 0 $color_white;
+
+					transition: all 0.25s linear;
+				}
+			}
+		}
+	}
+
+	&__action {
+		justify-self: end;
+
+		button {
+			background-color: $color_orange_supernova;
+
+			width: 20rem;
+			height: 6rem;
+
+			padding: 1rem 2.5rem;
+
+			border: none;
+			border-radius: 4rem;
+
+			font-size: 2.8rem;
+
+			cursor: pointer;
+
+			&:hover,
+			&:focus {
+				animation: pulse 1s;
+				box-shadow: 0 0 0 3rem rgba($color:$color_white, $alpha:0);
+
+				transition: all 1s ease-out;
+			}
+
+			@keyframes pulse {
+				0% {
+					box-shadow: 0 0 0 0 $color_orange_supernova;
+				}
+			}
+		}
+	}
+}
