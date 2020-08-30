@@ -149,10 +149,25 @@
 			}
 
 			.button {
-				background-color: $color_blue_cornflower;
-				color: $color_white;
+				margin: 3rem auto 3rem;
 
-				margin: 3rem auto 6rem;
+				transition: background-color 200ms ease-out;
+
+				&--primary {
+					background-color: $color_blue_cornflower;
+					color: $color_white;
+				}
+
+				&--gray,
+				&--google {
+					background-color: $color_gray_95;
+					color: $color_gray_10;
+				}
+
+				&--google:hover {
+					background-color: $color_blue_cornflower;
+					color: $color_white;
+				}
 			}
 		}
 

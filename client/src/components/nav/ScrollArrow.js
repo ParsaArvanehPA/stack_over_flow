@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
-import KeyboardArrowUpIcon from '@material-ui/icons/KeyboardArrowUp';
+import { RiArrowDropUpLine as UpArrowIcon } from 'react-icons/ri';
+import { IconContext } from 'react-icons/lib';
 
 const ScrollArrow = () => {
 	const [ showScroll, setShowScroll ] = useState(false);
@@ -20,14 +21,16 @@ const ScrollArrow = () => {
 	window.addEventListener('scroll', checkScrollTop);
 
 	return (
-		<KeyboardArrowUpIcon
-			className='scrollTop'
-			onClick={scrollTop}
-			style={{
-				display  : showScroll ? 'flex' : 'none',
-				fontSize : '6rem'
-			}}
-		/>
+		<IconContext.Provider
+			value={{
+				className : 'scrollTop',
+				size      : '6rem'
+			}}>
+			<UpArrowIcon
+				onClick={scrollTop}
+				style={{ display: showScroll ? 'flex' : 'none' }}
+			/>
+		</IconContext.Provider>
 	);
 };
 
